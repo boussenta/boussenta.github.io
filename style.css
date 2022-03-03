@@ -1,0 +1,85 @@
+/* la page index :*/
+
+body{
+    background-color: #2c2c2c;
+    font-family:'Noto Sans',sans-serif;
+    text-align: center;
+}
+.myDiv {
+    text-align: center;
+    margin-bottom:5px;
+    background-color: #555555;
+    width: 170px;
+    height: 300px;
+    border-radius: 8px;
+    color: white;
+}
+.text{
+    margin-bottom:70px;
+    font-size: 11px;
+}
+.myDiv:hover {
+    background-color: #979797;
+    color: rgb(0, 0, 0);
+}
+.image{
+    border: 2px solid rgb(255, 255, 255);
+    width: 150px;
+    height: 228px;
+    border-radius: 8px;
+    margin-top:6px;
+}
+h2{
+    color: white;
+}
+.note{
+    color: rgb(255, 238, 0);
+    font-size: 13px;
+}
+.image:hover{
+    width: 150px;
+    height: 228px;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+/* la page du film :*/
+
+.myDiv2 {
+    margin-left: 10px;
+    margin-bottom:5px;
+    background-color: #555555;
+    width: 50%;
+    min-width: 500px;
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+}
+.image2{
+    border: 2px solid rgb(255, 255, 255);
+    width: 162px;
+    height: 248px;
+    border-radius: 8px;
+    margin-top:10px;
+    margin-left:10px;
+
+}
+.text2{
+    min-width: 200px;
+    color: white;
+    font-size: 15px;
+    margin-left:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align: left;
+}
+.note2{
+    color: rgb(255, 238, 0);
+    font-size: 15px;
+}
+.synopsis{
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    margin-top:10px;
+    margin-left:10px;
+}
