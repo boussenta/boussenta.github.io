@@ -26,11 +26,11 @@ function myFunction(i) {
     </td>
     </tr>
     </table>
-        <div class="synopsis"> <strong>Le synopsis du film : </strong> <br/> ${filmj.filmjs[i].synopsis} <br/><br/>
-        </div>
-
+        <div class="synopsis"> <strong>Le synopsis du film : </strong> <br/> ${filmj.filmjs[i].synopsis} <br/>
+        </div><br/>
+        <div>
         <iframe width="560" height="315" src=${filmj.filmjs[i].video_film_href}  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+        </div>
     </div>
 </body>
     <script src="new 1.js"></script>
@@ -44,8 +44,8 @@ function pagesuivante(){
     numpage += 1;
     if (numpage < filmj.filmjs.length/54){
         document.getElementById("demo").innerHTML = content.slice(54*numpage, 54*numpage+54);
-        document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1);
-        document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1);
+        document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
+        document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
     }else{
         numpage -= 1;
     }
@@ -54,8 +54,8 @@ function pageprecedente(){
     numpage -= 1;
     if (numpage >= 0){
         document.getElementById("demo").innerHTML = content.slice(54*numpage, 54*numpage+54);
-        document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1);
-        document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1);
+        document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
+        document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
     }else{
         numpage += 1;
     }
@@ -70,17 +70,17 @@ for(var i=0; i<filmj.filmjs.length; i++){
                 <div class="text">
                     <u><strong>${filmj.filmjs[i].titre_film}</strong></u> <br/>
                     <strong class="note">Note google : ${filmj.filmjs[i].note_google} </strong> <br/>
-                    <strong>${[i]}</strong>
+                    <strong>${filmj.filmjs[i].date_sortie}</strong>
                 </div>
             </button>
         `;
         }
 document.getElementById("demo").innerHTML = content.slice(0, 54);
-document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1);
-document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1);
+document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
+document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
 
 
-// trier les films croissant :
+// trier les films par note croissant :
 function croissant(){
     numpage = 0;
     content=[];
@@ -97,11 +97,11 @@ function croissant(){
         </button>
     `;}
     document.getElementById("demo").innerHTML = content.slice(0, 54);
-    document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1);
-    document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1);
+    document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
+    document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
 };
 
-// trier les films décroissant :
+// trier les films par note décroissant :
 function décroissant(){
     numpage = 0;
     content=[];
@@ -119,11 +119,11 @@ function décroissant(){
     `;
         }
     document.getElementById("demo").innerHTML = content.slice(0, 54);
-    document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1);
-    document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1);
+    document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
+    document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
 };
 
-// trier les films parnom A -> z :
+// trier les films parnom A -> Z :
 function parnomA(){
     numpage = 0;
     content=[];
@@ -141,8 +141,8 @@ function parnomA(){
     `;
         }
     document.getElementById("demo").innerHTML = content.slice(0, 54);
-    document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1);
-    document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1);
+    document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
+    document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
 };
 
 // trier les films parnom Z -> A :
@@ -163,6 +163,6 @@ function parnomZ(){
     `;
         }
     document.getElementById("demo").innerHTML = content.slice(0, 54);
-    document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1);
-    document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1);
+    document.getElementById("NumPage").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
+    document.getElementById("NumPage1").innerHTML = "Page : " + (numpage+1) + "/" + Math.ceil(filmj.filmjs.length/54);
 };

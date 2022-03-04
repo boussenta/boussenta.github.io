@@ -13,6 +13,7 @@ body{
     height: 300px;
     border-radius: 8px;
     color: white;
+    cursor: pointer;
 }
 .text{
     margin-bottom:70px;
@@ -34,13 +35,23 @@ h2{
 }
 .note{
     color: rgb(255, 238, 0);
-    font-size: 13px;
+    font-size: 12px;
 }
 .image:hover{
     width: 150px;
     height: 228px;
     border-radius: 8px;
     margin-top: 6px;
+}
+.trier{
+    background-color: #555555;
+    color: white;
+    border-radius: 22px;
+    cursor: pointer;
+}
+.trier:hover{
+    background-color: #979797;
+    color: rgb(0, 0, 0);
 }
 /* la page du film :*/
 
